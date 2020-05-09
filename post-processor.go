@@ -52,16 +52,8 @@ func (p *PostProcessor) PostProcess(ctx context.Context, ui packer.Ui, artifact 
 
 	amiId := p.GetImageId(artifact)
 	for _, tpl := range p.config.Parameters {
-		// if tpl.SecureString == nil {
-		// 	tpl.SecureString = false
-		// }
-
-		// if tpl.AmiDataType == nil {
-		// 	tpl.AmiDataType = false
-		// }
-
 		message := fmt.Sprintf("Register the AMI ID to Parameter Store.(Parameter Name: %s, AMI ID: %s)", tpl.Name, amiId)
-		ui.Say(message)
+		ui.Message(message)
 		_, err = RegisterToParameterStore(amiId, tpl.Name, tpl.SecureString, tpl.AmiDataType)
 		if err != nil {
 			return nil, true, false, err
