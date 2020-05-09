@@ -8,7 +8,7 @@
 
 ```sh
 $ mkdir -p ~/.packer.d/plugins
-$ wget https://github.com/inokappa/packer-post-processor-aws-parameter-store/releases/download/v0.0.2/packer-post-processor-aws-parameter-store_darwin_amd64 -O ~/.packer.d/plugins/packer-post-processor-aws-parameter-store
+$ wget https://github.com/inokappa/packer-post-processor-aws-parameter-store/releases/download/v0.0.3/packer-post-processor-aws-parameter-store_darwin_amd64 -O ~/.packer.d/plugins/packer-post-processor-aws-parameter-store
 ```
 
 ## Usage
